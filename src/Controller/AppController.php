@@ -37,12 +37,19 @@ class AppController extends Controller
      *
      * @return void
      */
-    public function initialize(): void
+     protected $session;
+     public function initialize(): void
     {
         parent::initialize();
+        //$this->loadComponent('Auth');
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        //$this->session = $this->getRequest()->getSession();
+
+    // Deny unauthorized access by default
+        //$this->Auth->deny();
+    
 
         /*
          * Enable the following component for recommended CakePHP form protection settings.

@@ -18,10 +18,10 @@ class PostsController extends AppController
      * @return \Cake\Http\Response|null|void Renders view
      */
     //Add an initialization method to the Posts controller
-    // public function initialize()
-    // {
-    // parent::initialize();
-    // }
+    public function initialize(): void
+    {
+    parent::initialize();
+    }
     public function index()
     {
         $this->paginate = [
